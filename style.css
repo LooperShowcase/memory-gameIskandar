@@ -1,0 +1,92 @@
+body{
+    background-color: rgb(148, 232, 241);
+}
+  
+  #cards {
+    justify-content: center;
+    display: grid;
+    grid-gap: 16px;
+    grid-template-rows: repeat(2, 210px);
+    grid-template-columns: repeat(6, 140px);
+  }
+  
+  .card {
+    height: 210px;
+    width: 140px;
+    border-radius: 10px;
+    background-color: white;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: all 0.5s ease-in-out;
+  }
+  
+  .front-image {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .card.flipped {
+    transform: rotateY(180deg);
+  }
+  
+  .front,
+  .back {
+    backface-visibility: hidden;
+    position: absolute;
+    border-radius: 10px;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+  }
+  
+  .card .front {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .card .back {
+    background-image: url("assets/back.png");
+    background-position: center center;
+    background-size: cover;
+    backface-visibility: hidden;
+  }
+  
+  .card .front {
+    transform: rotateY(180deg);
+  }
+  
+  @media (max-width: 1000px) {
+    /* Adjust font sizes */
+    h1 {
+      font-size: 36px;
+    }
+    #cards {
+      grid-template-columns: repeat(3, 140px);
+      grid-template-rows: repeat(4, 210px);
+      grid-gap: 10px;
+    }
+  
+    .card {
+      height: 210px;
+      width: 140px;
+    }
+    
+}
+body {
+        /* Set the background image */
+        background-image: url('');
+        
+        /* Set the background size to cover the entire container */
+        background-size: cover;
+    
+        /* Set the background position to center */
+        background-position: center;
+        
+        /* Prevent the background image from repeating */
+        background-repeat: no-repeat;
+    
+        /* If you want the image fixed in place as the content scrolls */
+        background-attachment: fixed;
+    }
